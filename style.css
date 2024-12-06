@@ -2,136 +2,143 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
-}
-
-.container {
+  background: linear-gradient(to bottom, orange 33%, white 66%, green);
   min-height: 100vh;
-  background-color: bisque;
-  border: 10px solid black;
+  width: 100%;
+  border: .5rem solid black;
 }
 
-.main-content {
-  width: 60%;
+header {
+  width: 100%;
 
-  margin: 6rem auto;
-}
-
-.top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  margin-bottom: 2rem;
-}
-
-.top .name {
-}
-
-.top .image {
-  height: auto;
-  min-width: 100px;
-  max-width: 300px;
-  width: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  padding: 5px;
-  background-color: white;
-  border-radius: 50%;
-  margin-top: 1.5rem;
+ padding: 3rem 1.5rem 1.5rem;
 }
 
-.top img {
-  height: auto;
-  width: 100%;
-  border-radius: 50%;
+header .text {
+
 }
 
-.top h1 {
+header .text h1 {
+  font-size: clamp(1rem, 8vw, 3rem);
   text-align: center;
-  font-size: 2.5rem;
+  letter-spacing: 1px;
 }
-.top h3 {
-  text-align: right;
-  font-size: 1.5rem;
+header .text p {
+  text-align:right;
+  font-size: clamp(1rem, 4vw, 2rem);
+}
+
+
+
+
+main {
+
+}
+.photo {
+  width: 100%;
+
+  padding: 1.5rem ;
+}
+.photo .container {
+
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.photo .container .image {
+  width: min(350px, 50%);
+  border-radius: 100%;
+  padding: 4px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.photo .container .image img {
+  width: 100%;
+
+  border-radius: 100%;
 }
 
 .about {
-  margin-bottom: 2rem;
+  
+  padding: 1.5rem;
 }
-.about h3 {
+.about .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  
+}
+.about .container h1 {
+  font-size: clamp(1.25rem, 8vw, 3rem);
+  font-weight: 550;
+  letter-spacing: 1px;
   text-align: center;
   margin-bottom: 1.5rem;
-  font-size: 4rem;
-  font-weight: normal;
 }
-.about p {
-  text-align: justify;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.about .container p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  line-height: 1.6;
+
   letter-spacing: 1px;
+  text-align: justify;
 }
-.bio {
-  margin-bottom: 3rem;
-}
-.bio h2 {
-  font-size: 2.5rem;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
+.about .container span {
+  font-weight: bold;
 }
 
-.bio ul {
+.bio {
+ 
+  padding: 1.5rem;
 }
-.bio li {
-  margin-left: 4rem;
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
+.bio .container {
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
+.bio .container h3 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+.bio .container li {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+
+  line-height: 1.5;
+  letter-spacing: 1px;
+  margin-left: clamp(1rem, 8vw, 5rem);
   text-align: justify;
 }
 
 footer {
-  text-align: right;
+  padding: 1.5rem 1.5rem 3rem;
 }
-
-@media (max-width: 1024px) {
-  .top-section h3 {
-    text-align: center;
-  }
-}
-
-@media (max-width: 500px) {
-  .top-section h1 {
-    font-size: 1.5rem;
-  }
-
-  .top-section h3 {
-    font-size: 1rem;
-  }
-
-  .about h3 {
-    font-size: 2.5rem;
-  }
-
-  footer {
-    text-align: justify;
-  }
-  .about p {
-    font-size: 1rem;
-   
-    letter-spacing: 0.5px;
+footer .container {
   
-  }
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
-  .bio li {
-    margin-left: 0;
+footer p {
+  text-align: right;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  letter-spacing: 0.5px;
+}
 
+
+@media (max-width:500px) {
+  header .text p {
+  display: none;
   }
-  .bio h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
+  
+  
 }
